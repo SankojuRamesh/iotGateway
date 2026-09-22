@@ -1,4 +1,4 @@
-# IoT Gateway
+# IoT Gateway Monitoring
 
 A configuration-driven IoT Monitoring, Dashboard, Analytics, and Reporting platform. Devices, device types, metrics, dashboards, widgets, alerts, and reports are all defined from the UI/API at runtime — nothing is hardcoded in the frontend or backend.
 
