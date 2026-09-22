@@ -1,0 +1,140 @@
+:root {
+  --bg: #0b0c0e;
+  --surface: #181b1f;
+  --surface-raised: #212428;
+  --border: #2c3235;
+  --border-hover: #3d444a;
+  --text-primary: #d8d9da;
+  --text-secondary: #8e9297;
+  --text-muted: #6a6f76;
+  --accent: #5794f2;
+  --danger: #f2495c;
+  --warning: #ff9830;
+  --success: #73bf69;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+/* --- Responsive app shell --- */
+.app-shell {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+.app-sidebar {
+  width: 56px;
+  flex-shrink: 0;
+}
+.app-bottom-nav {
+  display: none;
+}
+.app-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.app-content {
+  flex: 1;
+  overflow: auto;
+  padding: 16px;
+}
+.widget-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 12px;
+  align-items: stretch;
+}
+
+/* --- react-grid-layout dark theme overrides --- */
+.react-grid-item.react-grid-placeholder {
+  background: var(--accent);
+  opacity: 0.2;
+  border-radius: 6px;
+}
+.react-grid-item > .react-resizable-handle::after {
+  border-right: 2px solid var(--text-muted);
+  border-bottom: 2px solid var(--text-muted);
+}
+.widget-drag-handle {
+  cursor: move;
+}
+
+@media (max-width: 768px) {
+  .app-sidebar {
+    display: none;
+  }
+  .app-bottom-nav {
+    display: flex;
+  }
+  .app-content {
+    padding: 12px;
+    padding-bottom: 72px;
+  }
+  .widget-grid {
+    grid-template-columns: 1fr;
+  }
+}

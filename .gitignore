@@ -1,0 +1,47 @@
+# --- Python / Django backend ---
+backend/.venv/
+backend/venv/
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+backend/staticfiles/
+backend/media/
+db.sqlite3
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- Node / React frontend ---
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Android / Capacitor (future pass) ---
+mobile/node_modules/
+mobile/android/
+mobile/ios/
+*.apk
+*.aab
+
+# --- Env / secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Docker / infra ---
+infra/mosquitto/data/
+infra/mosquitto/log/
+postgres_data/
+
+# --- IDE / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+*.log
